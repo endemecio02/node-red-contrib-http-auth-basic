@@ -1,0 +1,17 @@
+{
+  "name": "node-red-contrib-http-auth-basic",
+  "version": "1.0.0",
+  "description": "HTTP Basic Authentication node for Node-RED",
+  "author": "Endemecio Santana",
+  "license": "MIT",
+  "dependencies": {
+    "apache-crypt": "^1.0.9",
+    "apache-md5": "^1.0.3",
+    "bcrypt": "^0.8.5"
+  },
+  "node-red": {
+    "nodes": {
+      "node-red-contrib-http-auth-basic": "node-red-contrib-http-auth-basic.js"
+    }
+  }
+}

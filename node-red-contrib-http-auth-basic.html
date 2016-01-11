@@ -1,0 +1,46 @@
+<script type="text/javascript">
+	RED.nodes.registerType("node-red-contrib-http-auth-basic", {
+		category: "security",
+		inputs: 1,
+		outputs: 1,
+		defaults: {
+			name: {value: ""},
+			realm: {value: "", required: true},
+			username: {value: ""},
+			password: {value: ""},
+      file: {value: ""}
+		},
+		color: "#E7E7AE",
+		icon: "white-globe.png",
+		label: function() {return this.name.trim() || "http auth - basic";},
+		labelStyle: function() {return this.name.trim() ? "node_label_italic" : "";},
+		paletteLabel: "http auth - basic"
+	});
+</script>
+
+<script type="text/x-red" data-template-name="node-red-contrib-http-auth-basic">
+	<div class="form-row">
+		<label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+		<input id="node-input-name" type="text" />
+	</div>
+	<hr />
+	<div class="form-row">
+		<label for="node-input-realm"><i class="fa fa-globe"></i> Realm</label>
+		<input id="node-input-realm" type="text" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-username"><i class="fa fa-user"></i> Username</label>
+		<input id="node-input-username" type="text" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-password"><i class="fa fa-key"></i> Password</label>
+		<input id="node-input-password" type="text" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-file"><i class="fa fa-list"></i> File</label>
+		<input id="node-input-file" type="text" placeholder=".htpasswd" />
+	</div>
+</script>
+
+<script type="text/x-red" data-help-name="node-red-contrib-http-auth-basic">
+</script>
